@@ -25,20 +25,24 @@ function App() {
     track: {},
   })(Switch);
 
-  const dictionaryApi = async () => {
-    try {
-      const data = await axios.get(
-        `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
-      );
-
-      setMeanings(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
 
   useEffect(() => {
-    dictionaryApi();
+    const dictionaryApi = async () => {
+      try {
+        const data = await axios.get(
+          `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
+        );
+  
+        setMeanings(data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    if(word) {
+      dictionaryApi();
+    }
   }, [word, language]);
 
   return (
