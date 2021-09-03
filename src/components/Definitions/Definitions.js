@@ -25,7 +25,7 @@ const Definitions = ({ word, meanings, language, lightMode}) => {
                 key={nanoid()}
                 className="singleMeanings"
                 style={{ 
-                  backgroundColor: lightMode ? '#3b5360': "white",
+                  backgroundColor: lightMode ? '#696969': "white",
                   color: lightMode ? 'white': "black" }}
               >
                 <b>{def.definition}</b>
