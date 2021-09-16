@@ -17,6 +17,6 @@ A web dictionary using a dictionary API.
 
  A live demo can be found at [react-dictionary-ml.netlify.app](https://react-dictionary-ml.netlify.app/).
 
- ![version 1](https://drive.google.com/file/d/15LgaeS7jE8ep26FlkOKWiylQ9rUs3BJc/view?usp=sharing)
+ ![version 1](images/Math-App-v1.jpg)
 
-![version 2](https://drive.google.com/file/d/1rJ7I5tHNeulf9ixjjwadJQ-Bz_isit38/view?usp=sharing)
+![version 2](images/Math-App-v2.jpg)
