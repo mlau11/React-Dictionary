@@ -2,10 +2,10 @@ import React from "react";
 import { nanoid } from "nanoid";
 import "./Definitions.css";
 
-const Definitions = ({ word, meanings, language, lightMode}) => {
+const Definitions = ({ word, meanings, lightMode}) => {
   return (
     <div className="meanings">
-      {meanings[0] && word && language === "en" && (
+      {meanings[0] && word && (
         <audio
           src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
           style={{ backgroundColor: "#fff", borderRadius: 10, width: '100%' }}

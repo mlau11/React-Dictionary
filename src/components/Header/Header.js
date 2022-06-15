@@ -1,12 +1,10 @@
 import {
   createTheme,
-  MenuItem,
   TextField,
   ThemeProvider,
 } from "@material-ui/core";
 import React from "react";
 import "./Header.css";
-import languages from "../../data/language";
 
 const Header = ({ language, setLanguage, word, setWord, lightMode }) => {
   const darkTheme = createTheme({
@@ -35,21 +33,6 @@ const Header = ({ language, setLanguage, word, setWord, lightMode }) => {
             value={word}
             onChange={(e) => setWord(e.target.value)}
           />
-          <TextField
-            className="select"
-            select
-            label="Language"
-            value={language}
-            onChange={(e) => {
-              handleChange(e.target.value);
-            }}
-          >
-            {languages.map((option) => (
-              <MenuItem key={option.label} value={option.label}>
-                {option.value}
-              </MenuItem>
-            ))}
-          </TextField>
         </ThemeProvider>
       </div>
     </div>

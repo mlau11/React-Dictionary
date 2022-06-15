@@ -8,7 +8,6 @@ import { grey } from "@material-ui/core/colors";
 function App() {
   const [meanings, setMeanings] = useState([]);
   const [word, setWord] = useState("");
-  const [language, setLanguage] = useState("en");
   const [lightMode, setLightMode] = useState(false);
 
   const ModeSwitch = withStyles({
@@ -31,7 +30,7 @@ function App() {
     const dictionaryApi = async () => {
       try {
         const data = await axios.get(
-          `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
         );
   
         setMeanings(data.data);
@@ -43,7 +42,7 @@ function App() {
     if(word) {
       dictionaryApi();
     }
-  }, [word, language]);
+  }, [word]);
 
   return (
     <div
@@ -74,14 +73,12 @@ function App() {
           />
         </div>
         <Header
-          language={language}
-          setLanguage={setLanguage}
           word={word}
           setWord={setWord}
           lightMode={lightMode}
         />
         {meanings && (
-          <Definitions word={word} meanings={meanings} language={language} lightMode={lightMode} />
+          <Definitions word={word} meanings={meanings} lightMode={lightMode} />
         )}
       </Container>
     </div>
