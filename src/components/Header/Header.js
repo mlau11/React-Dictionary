@@ -6,7 +6,7 @@ import {
 import React from "react";
 import "./Header.css";
 
-const Header = ({ language, setLanguage, word, setWord, lightMode }) => {
+const Header = ({ word, setWord, lightMode }) => {
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -15,12 +15,7 @@ const Header = ({ language, setLanguage, word, setWord, lightMode }) => {
       type: lightMode ? "light" : "dark",
     },
   });
-
-  const handleChange = (language) => {
-    setLanguage(language);
-    setWord("");
-  };
-
+  
   return (
     <div className="header">
       <span className="title">{word ? word : "Dictionary"}</span>
