@@ -8,8 +8,6 @@ A web dictionary using a dictionary API.
     - Definition
     - Synonyms
     - Pronunciation audio
-  * Languages
-    - Supports 12 languages
   * Progressive Web App
     - Can be downloaded as a progressive web app
 
